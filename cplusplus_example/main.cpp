@@ -7,16 +7,18 @@
 //
 
 #include <iostream>
-#include <string>
-#include <sstream>
 using namespace std;
 
 
+int addition (int a, int b)
+{
+    int r;
+    r=a+b;
+    return r;
+}
+
 int main(int argc, const char * argv[]) {
-    string str {"Hello!"};
-    for (char c : str)
-    {
-        std::cout << "[" << c << "]";
-    }
-    std::cout << '\n';
+    int z;
+    z = addition (5,3);
+    cout << "The result is " << z << "\n";
 }
