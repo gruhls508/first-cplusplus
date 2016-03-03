@@ -13,16 +13,10 @@ using namespace std;
 
 
 int main(int argc, const char * argv[]) {
-    string mystr;
-    float price=0;
-    int quantity=0;
-
-    cout << "Enter price: ";
-    getline (cin,mystr);
-    stringstream(mystr) >> price;
-    cout << "Enter quantity: ";
-    getline (cin,mystr);
-    stringstream(mystr) >> quantity;
-    cout << "Total price: " << price*quantity << endl;
-    return 0;
+    string str {"Hello!"};
+    for (char c : str)
+    {
+        std::cout << "[" << c << "]";
+    }
+    std::cout << '\n';
 }
