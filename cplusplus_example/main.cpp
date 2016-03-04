@@ -17,8 +17,23 @@ int addition (int a, int b)
     return r;
 }
 
+
+string concatenate (const string& a, const string& b)
+{
+    return a+b;
+}
+
+
 int main(int argc, const char * argv[]) {
     int z;
     z = addition (5,3);
-    cout << "The result is " << z << "\n";
+
+
+
+    string a = "art";
+    string b = " form";
+    string c = concatenate(a, b);
+
+
+    cout << "The (concatenate) result is " << c << "\n";
 }
