@@ -10,28 +10,17 @@
 using namespace std;
 
 
-void odd (int x);
-void even (int x);
-
-int main()
+long factorial (long a)
 {
-    int i;
-    do {
-        cout << "Please, enter number (0 to exit): ";
-        cin >> i;
-        odd (i);
-    } while (i!=0);
+    if (a > 1)
+        return (a * factorial (a-1));
+    else
+        return 1;
+}
+
+int main ()
+{
+    long number = 9;
+    cout << number << "! = " << factorial (number) << '\n';
     return 0;
-}
-
-void odd (int x)
-{
-    if ((x%2)!=0) cout << "It is odd.\n";
-    else even (x);
-}
-
-void even (int x)
-{
-    if ((x%2)==0) cout << "It is even.\n";
-    else odd (x);
 }
