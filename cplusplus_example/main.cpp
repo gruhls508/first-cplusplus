@@ -10,29 +10,28 @@
 using namespace std;
 
 
-int addition (int a, int b)
-{
-    int r;
-    r=a+b;
-    return r;
-}
+void odd (int x);
+void even (int x);
 
-
-inline string concatenate (const string& a, const string& b)
+int main()
 {
-    return a+b;
-}
-
-int divide (int a, int b=2)
-{
-    int r;
-    r=a/b;
-    return (r);
-}
-
-int main ()
-{
-    cout << divide (12) << '\n';
-    cout << divide (20,4) << '\n';
+    int i;
+    do {
+        cout << "Please, enter number (0 to exit): ";
+        cin >> i;
+        odd (i);
+    } while (i!=0);
     return 0;
+}
+
+void odd (int x)
+{
+    if ((x%2)!=0) cout << "It is odd.\n";
+    else even (x);
+}
+
+void even (int x)
+{
+    if ((x%2)==0) cout << "It is even.\n";
+    else odd (x);
 }
