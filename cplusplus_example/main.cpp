@@ -18,22 +18,21 @@ int addition (int a, int b)
 }
 
 
-string concatenate (const string& a, const string& b)
+inline string concatenate (const string& a, const string& b)
 {
     return a+b;
 }
 
+int divide (int a, int b=2)
+{
+    int r;
+    r=a/b;
+    return (r);
+}
 
-int main(int argc, const char * argv[]) {
-    int z;
-    z = addition (5,3);
-
-
-
-    string a = "art";
-    string b = " form";
-    string c = concatenate(a, b);
-
-
-    cout << "The (concatenate) result is " << c << "\n";
+int main ()
+{
+    cout << divide (12) << '\n';
+    cout << divide (20,4) << '\n';
+    return 0;
 }
