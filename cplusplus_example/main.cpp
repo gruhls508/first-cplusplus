@@ -10,17 +10,15 @@
 using namespace std;
 
 
-long factorial (long a)
+template <class SomeType>
+SomeType sum (SomeType a, SomeType b)
 {
-    if (a > 1)
-        return (a * factorial (a-1));
-    else
-        return 1;
+    return a+b;
 }
 
 int main ()
 {
-    long number = 9;
-    cout << number << "! = " << factorial (number) << '\n';
+    cout << sum (10,20) << '\n';
+    cout << sum (1.0,1.5) << '\n';
     return 0;
 }
