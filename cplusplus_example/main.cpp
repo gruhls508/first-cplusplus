@@ -10,15 +10,21 @@
 using namespace std;
 
 
-template <class SomeType>
-SomeType sum (SomeType a, SomeType b)
+namespace foo
 {
-    return a+b;
+    int value() { return 5; }
 }
 
-int main ()
+namespace bar
 {
-    cout << sum (10,20) << '\n';
-    cout << sum (1.0,1.5) << '\n';
+    const double pi = 3.1416;
+    double value() { return 2*pi; }
+}
+
+int main () {
+    cout << foo::value() << '\n';
+    cout << bar::value() << '\n';
+    cout << bar::pi << '\n';
+
     return 0;
 }
