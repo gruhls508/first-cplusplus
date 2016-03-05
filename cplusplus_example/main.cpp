@@ -7,20 +7,17 @@
 //
 
 #include <iostream>
+#include <array>
 using namespace std;
 
-
-void printarray (int arg[], int length) {
-    for (int n=0; n<length; ++n)
-        cout << arg[n] << ' ';
-    cout << '\n';
-}
-
-int main ()
+int main()
 {
-    int firstarray[] = {6, 12, 18, 24, 30};
-    int secondarray[] = {4, 8, 12, 16, 20, 24, 28};
-    printarray (firstarray,5);
-    printarray (secondarray,7);
+    array<int,5> myarray {13, 26, 39, 52, 65};
+
+    for (int i=0; i<myarray.size(); ++i)
+        ++myarray[i];
+
+    for (int elem : myarray)
+        cout << elem << '\n';
     return 0;
 }
