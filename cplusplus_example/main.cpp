@@ -10,15 +10,17 @@
 using namespace std;
 
 
-int foo [] {165, 4, 5, 6322, 12, 567};
-int n, result=0;
+void printarray (int arg[], int length) {
+    for (int n=0; n<length; ++n)
+        cout << arg[n] << ' ';
+    cout << '\n';
+}
 
 int main ()
 {
-    for ( n=0 ; n<6 ; ++n )
-    {
-        result += foo[n];
-    }
-    cout << result << '\n';
+    int firstarray[] = {6, 12, 18, 24, 30};
+    int secondarray[] = {4, 8, 12, 16, 20, 24, 28};
+    printarray (firstarray,5);
+    printarray (secondarray,7);
     return 0;
 }
