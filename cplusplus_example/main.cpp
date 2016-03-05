@@ -10,21 +10,15 @@
 using namespace std;
 
 
-namespace foo
+int foo [] {165, 4, 5, 6322, 12, 567};
+int n, result=0;
+
+int main ()
 {
-    int value() { return 5; }
-}
-
-namespace bar
-{
-    const double pi = 3.1416;
-    double value() { return 2*pi; }
-}
-
-int main () {
-    cout << foo::value() << '\n';
-    cout << bar::value() << '\n';
-    cout << bar::pi << '\n';
-
+    for ( n=0 ; n<6 ; ++n )
+    {
+        result += foo[n];
+    }
+    cout << result << '\n';
     return 0;
 }
